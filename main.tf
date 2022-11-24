@@ -32,7 +32,7 @@ resource "aws_security_group" "blog" {
   name = "blog"
   description = "Allow http and https in. Allow everything out" 
   
-  vpc_security_group_ids = [aws_security_group.blog.id]
+  //vpc_security_group_ids = [aws_security_group.blog.id]
 
   vpc_id = data.aws_vpc.default.id
 }
