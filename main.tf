@@ -30,7 +30,7 @@ resource "aws_instance" "blog" {
 
 resource "aws_security_group" "blog" {
   name = "blog"
-  description = "Allow http and https in. "Allow everything out" 
+  description = "Allow http and https in. Allow everything out" 
   
   vpc_security_group_ids = [aws_security_group.blog.id]
 
@@ -67,3 +67,6 @@ resource "aws_security_group_rule" "blog_everything_out" {
 
   security_group_id = aws_security_group.blog.id
 }
+
+
+
