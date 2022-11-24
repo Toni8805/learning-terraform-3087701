@@ -61,7 +61,6 @@ resource "aws_security_group" "blog" {
   
   //vpc_security_group_ids = [aws_security_group.blog.id]
 
-  vpc_id = data.aws_vpc.default.id
 }
 
 resource "aws_security_group_rule" "blog_http_in" {
